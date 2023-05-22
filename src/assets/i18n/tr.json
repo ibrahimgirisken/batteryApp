@@ -1,9 +1,14 @@
 {
-    "home":"Anayasa",
+    "home":"Anasayfa",
     "products":"Ürünler",
     "corporate":"Kurumsal",
     "contact":"İletişim",
     "lang":"Dil",
     "about":"Hakkında",
-    "faq":"Sık Sorulan Sorular"
+    "faq":"Sık Sorulan Sorular",
+    "tr":"TR",
+    "en":"EN",
+    "about-us":"Hakkımızda",
+    "follow-us":"Bizi Takip Edin",
+    "footer-pattent":"© 2023 Web Siteniz. Her hakkı saklıdır."
 }

@@ -11,13 +11,6 @@ const routes: Routes = [
     children: [
       { path: '', component: DashboardComponent },
       {
-        path: 'dashboard',
-        loadChildren: () =>
-          import('./admin/components/dashboard/dashboard.module').then(
-            (module) => module.DashboardModule
-          ),
-      },
-      {
         path: 'products',
         loadChildren: () =>
           import('./admin/components/products/products.module').then(
