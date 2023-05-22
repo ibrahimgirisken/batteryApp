@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnDestroy, OnInit  } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  constructor() { }
+
+  ngOnInit(): void {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+      navbar.classList.add('navbar-absolute');
+    }
+  }
+
+  ngOnDestroy(): void {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+      navbar.classList.remove('navbar-absolute');
+    }
+  }
 
 }
+
