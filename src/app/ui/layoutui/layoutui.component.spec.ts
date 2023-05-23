@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SidebarComponent } from './sidebar.component';
+import { LayoutuiComponent } from './layoutui.component';
 
-describe('SidebarComponent', () => {
-  let component: SidebarComponent;
-  let fixture: ComponentFixture<SidebarComponent>;
+describe('LayoutuiComponent', () => {
+  let component: LayoutuiComponent;
+  let fixture: ComponentFixture<LayoutuiComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SidebarComponent]
+      declarations: [LayoutuiComponent]
     });
-    fixture = TestBed.createComponent(SidebarComponent);
+    fixture = TestBed.createComponent(LayoutuiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

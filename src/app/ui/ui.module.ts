@@ -1,7 +1,7 @@
-import { LayoutModule } from './../admin/layout/layout.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComponentsModule } from './components/components.module';
+import { LayoutuiModule } from './layoutui/layoutui.module';
 
 
 
@@ -10,10 +10,10 @@ import { ComponentsModule } from './components/components.module';
   imports: [
     CommonModule,
     ComponentsModule,
-    LayoutModule
+    LayoutuiModule
   ],
   exports:[
-    LayoutModule
+    LayoutuiModule
   ]
 })
 export class UiModule { }

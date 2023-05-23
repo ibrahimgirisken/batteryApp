@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LayoutComponent } from './layout.component';
-import { ComponentsModule } from '../components/components.module';
+import { LayoutuiComponent } from './layoutui.component';
+import { ComponentsModule } from './components/components.module';
 import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
   declarations: [
-    LayoutComponent
+    LayoutuiComponent,
   ],
   imports: [
     CommonModule,
@@ -16,7 +16,7 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   exports:[
-    LayoutComponent
+    LayoutuiComponent
   ]
 })
-export class LayoutModule { }
+export class LayoutuiModule { }
