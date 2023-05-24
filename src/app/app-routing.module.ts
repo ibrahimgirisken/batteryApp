@@ -10,7 +10,7 @@ const routes: Routes = [
     path: 'admin',
     component: LayoutComponent,
     children: [
-      { path: '', component: DashboardComponent },
+      { path: 'index', component: DashboardComponent },
       {
         path: 'products',
         loadChildren: () =>
@@ -23,6 +23,34 @@ const routes: Routes = [
         loadChildren: () =>
           import('./admin/components/users/users.module').then(
             (module) => module.UsersModule
+          ),
+      },
+      {
+        path: 'corporate',
+        loadChildren: () =>
+          import('./admin/components/corporate/corporate.module').then(
+            (module) => module.CorporateModule
+          ),
+      },
+      {
+        path: 'settings',
+        loadChildren: () =>
+          import('./admin/components/settings/settings.module').then(
+            (module) => module.SettingsModule
+          ),
+      },
+      {
+        path: 'slider',
+        loadChildren: () =>
+          import('./admin/components/slider/slider.module').then(
+            (module) => module.SliderModule
+          ),
+      },
+      {
+        path: 'sss',
+        loadChildren: () =>
+          import('./admin/components/sss/sss.module').then(
+            (module) => module.SssModule
           ),
       },
     ],
