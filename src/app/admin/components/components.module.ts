@@ -7,6 +7,7 @@ import { CorporateModule } from './corporate/corporate.module';
 import { SettingsModule } from './settings/settings.module';
 import { SliderModule } from './slider/slider.module';
 import { SssModule } from './sss/sss.module';
+import { LangsModule } from './langs/langs.module';
 
 
 
@@ -20,7 +21,8 @@ import { SssModule } from './sss/sss.module';
     CorporateModule,
     SettingsModule,
     SliderModule,
-    SssModule
+    SssModule,
+    LangsModule
   ]
 })
 export class ComponentsModule { }

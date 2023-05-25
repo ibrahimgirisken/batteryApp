@@ -1,21 +1,5 @@
-<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-  <button
-    class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-    id="bd-theme"
-    type="button"
-    aria-expanded="false"
-    data-bs-toggle="dropdown"
-    aria-label="Toggle theme (light)"
-  >
-    <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
-      <use href="#sun-fill"></use>
-    </svg>
-    <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-  </button>
-</div>
 <main class="d-flex flex-nowrap">
   <h1 class="visually-hidden">Sidebars examples</h1>
-
   <div
     class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
     style="width: 280px; height: 100vh"
@@ -94,6 +78,15 @@
           >SSS</a
         >
       </li>
+      <li>
+        <a
+          class="nav-link"
+          aria-current="page"
+          routerLink="lang"
+          routerLinkActive="active"
+          >Lang</a
+        >
+      </li>
     </ul>
     <hr />
     <div class="dropdown">
@@ -121,7 +114,7 @@
       </ul>
     </div>
   </div>
-  <div class="b-example-divider b-example-vr container-fluid">
+  <div class="b-example-divider b-example-vr container-fluid scrollable-div">
     <router-outlet></router-outlet>
   </div>
 </main>

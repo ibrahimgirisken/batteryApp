@@ -1,6 +1,6 @@
 import { Component, VERSION } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-
+declare var $: any
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

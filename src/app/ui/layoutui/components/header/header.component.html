@@ -36,7 +36,7 @@
             ></button>
           </div>
           <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
               <li class="nav-item">
                 <a
                   class="nav-link"
@@ -96,43 +96,6 @@
                 >
               </li>
 
-              <li class="nav-item dropdown">
-                <select #language (change)="onChange(language.value)">
-                  <option
-                    *ngFor="let lang of translateService.getLangs()"
-                    [value]="lang"
-                  >
-                    <ng-container [ngSwitch]="lang">
-                      <ul class="dropdown-menu">
-                        <ng-container *ngSwitchCase="'tr'">
-                          <li>
-                            <img
-                              class="icon-flag"
-                              src="assets/icons/tr.svg"
-                              alt="Turkish Flag"
-                            />
-                            {{ "tr" | translate }}
-                          </li>
-                        </ng-container>
-                        <ng-container *ngSwitchCase="'en'">
-                          <li>
-                            <img
-                              class="icon-flag"
-                              src="assets/icons/en.svg"
-                              alt="English Flag"
-                            />
-                            {{ "en" | translate }}
-                          </li>
-                        </ng-container>
-                        <ng-container *ngSwitchDefault>
-                          {{ lang | translate }}
-                        </ng-container>
-                      </ul>
-                    </ng-container>
-                  </option>
-                </select>
-              </li>
-
               <!-- <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -173,6 +136,43 @@
                 </ul>
               </li> -->
             </ul>
+            <li class="nav-item dropdown language">
+              <select #language (change)="onChange(language.value)">
+                <option
+                  *ngFor="let lang of translateService.getLangs()"
+                  [value]="lang"
+                >
+                  <ng-container [ngSwitch]="lang">
+                    <ul class="dropdown-menu">
+                      <ng-container *ngSwitchCase="'tr'">
+                        <li>
+                          <img
+                            class="icon-flag"
+                            src="assets/icons/tr.svg"
+                            alt="Turkish Flag"
+                          />
+                          {{ "tr" | translate }}
+                        </li>
+                      </ng-container>
+                      <ng-container *ngSwitchCase="'en'">
+                        <li>
+                          <img
+                            class="icon-flag"
+                            src="assets/icons/en.svg"
+                            alt="English Flag"
+                          />
+                          
+                          {{ "en" | translate }}
+                        </li>
+                      </ng-container>
+                      <ng-container *ngSwitchDefault>
+                        {{ lang | translate }}
+                      </ng-container>
+                    </ul>
+                  </ng-container>
+                </option>
+              </select>
+            </li>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { LangsModule } from './admin/components/langs/langs.module';
 import { LayoutuiComponent } from './ui/layoutui/layoutui.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -51,6 +52,13 @@ const routes: Routes = [
         loadChildren: () =>
           import('./admin/components/sss/sss.module').then(
             (module) => module.SssModule
+          ),
+      },
+      {
+        path: 'lang',
+        loadChildren: () =>
+          import('./admin/components/langs/langs.module').then(
+            (module) => module.LangsModule
           ),
       },
     ],
