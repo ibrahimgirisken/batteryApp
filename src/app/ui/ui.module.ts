@@ -10,7 +10,7 @@ import { LayoutuiModule } from './layoutui/layoutui.module';
   imports: [
     CommonModule,
     ComponentsModule,
-    LayoutuiModule
+    LayoutuiModule,
   ],
   exports:[
     LayoutuiModule
