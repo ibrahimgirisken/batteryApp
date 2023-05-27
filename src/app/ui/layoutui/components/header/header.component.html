@@ -95,85 +95,41 @@
                   >{{ "contact" | translate }}</a
                 >
               </li>
-
-              <!-- <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href=""
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  {{ "lang" | translate }}
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a
-                      class="nav-link"
-                      aria-current="page"
-                      routerLinkActive="active"
-                      ><img
-                        class="icon-flag"
-                        src="assets/icons/tr.svg"
-                        alt="Turkish Flag"
-                      />
-                      Turkish</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="nav-link"
-                      aria-current="page"
-                      routerLinkActive="active"
-                      ><img
-                        class="icon-flag"
-                        src="assets/icons/en.svg"
-                        alt="English Flag"
-                      />
-                      English</a
-                    >
-                  </li>
-                </ul>
-              </li> -->
             </ul>
-            <li class="nav-item dropdown language">
+            <div class="nav-item dropdown language">
               <select #language (change)="onChange(language.value)">
                 <option
                   *ngFor="let lang of translateService.getLangs()"
                   [value]="lang"
                 >
                   <ng-container [ngSwitch]="lang">
-                    <ul class="dropdown-menu">
-                      <ng-container *ngSwitchCase="'tr'">
-                        <li>
-                          <img
-                            class="icon-flag"
-                            src="assets/icons/tr.svg"
-                            alt="Turkish Flag"
-                          />
-                          {{ "tr" | translate }}
-                        </li>
-                      </ng-container>
-                      <ng-container *ngSwitchCase="'en'">
-                        <li>
-                          <img
-                            class="icon-flag"
-                            src="assets/icons/en.svg"
-                            alt="English Flag"
-                          />
-                          
-                          {{ "en" | translate }}
-                        </li>
-                      </ng-container>
-                      <ng-container *ngSwitchDefault>
-                        {{ lang | translate }}
-                      </ng-container>
-                    </ul>
+                    <ng-container *ngSwitchCase="'tr'">
+                      <div class="flag-option">
+                        <img
+                          class="icon-flag"
+                          src="assets/icons/tr.png"
+                          alt="Turkish Flag"
+                        />
+                        {{ "tr" | translate }}
+                      </div>
+                    </ng-container>
+                    <ng-container *ngSwitchCase="'en'">
+                      <div class="flag-option">
+                        <img
+                          class="icon-flag"
+                          src="assets/icons/en.png"
+                          alt="English Flag"
+                        />
+                        {{ "en" | translate }}
+                      </div>
+                    </ng-container>
+                    <ng-container *ngSwitchDefault>
+                      {{ 'lang' | translate }}
+                    </ng-container>
                   </ng-container>
                 </option>
               </select>
-            </li>
-            
+            </div>
           </div>
         </div>
       </div>
