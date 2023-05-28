@@ -1,0 +1,50 @@
+{
+    "home": {
+        "tr": "Anasayfa",
+        "en": "Home"
+    },
+    "products": {
+        "tr": "Ürünler",
+        "en": "Products"
+    },
+    "corporate": {
+        "tr": "Kurumsal",
+        "en": "Corporate"
+    },
+    "contact": {
+        "tr": "İletişim",
+        "en": "Contact"
+    },
+    "lang": {
+        "tr": "Dil",
+        "en": "Lang"
+    },
+    "about": {
+        "tr": "Hakkımızda",
+        "en": "About"
+    },
+    "faq": {
+        "tr": "Sık Sorulan Sorular",
+        "en": "Faq"
+    },
+    "tr": {
+        "tr": "Tr",
+        "en": "Tr"
+    },
+    "en": {
+        "tr": "İngilizce",
+        "en": "English"
+    },
+    "about-us": {
+        "tr": "Hakkımızda",
+        "en": "About Us"
+    },
+    "follow-us": {
+        "tr": "Bizi Takip Edin",
+        "en": "Fallow Us"
+    },
+    "footer-pattent": {
+        "tr": "© 2023 Web Siteniz. Her hakkı saklıdır.",
+        "en": "© 2023 Your Website. All Rights Reserved."
+    }
+}

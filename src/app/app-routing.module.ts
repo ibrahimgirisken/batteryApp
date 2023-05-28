@@ -1,4 +1,3 @@
-import { LangsModule } from './admin/components/langs/langs.module';
 import { LayoutuiComponent } from './ui/layoutui/layoutui.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
