@@ -10,7 +10,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of jsonDataTr | keyvalue; let i = index">
+        <tr *ngFor="let item of getLangs() | keyvalue; let i = index">
           <td hidden>{{ i }}</td>
           <td>{{ item.key }}</td>
           <td>
