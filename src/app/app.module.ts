@@ -35,7 +35,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
         deps: [HttpClient]
       },
       defaultLanguage: "tr"
-    })
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
