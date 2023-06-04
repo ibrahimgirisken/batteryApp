@@ -9,6 +9,7 @@ import { UiModule } from './ui/ui.module';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient,'./assets/i18n/', '.json');
@@ -28,6 +29,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AdminModule,
     UiModule,
     ReactiveFormsModule,
+    CKEditorModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -37,7 +39,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       defaultLanguage: "tr"
     })
   ],
-  providers: [],
+  providers: [
+    {provide:"baseUrl",useValue:"https://localhost:7269/api",multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

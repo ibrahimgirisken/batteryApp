@@ -1,9 +1,6 @@
 <div class="d-flex" id="wrapper" [ngClass]="status ? 'toggled' : ''">
   <!-- Sidebar -->
-  <div
-    class="bg-light border-right"
-    id="sidebar-wrapper"
-  >
+  <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading">BatteryApp</div>
     <div class="list-group list-group-flush">
       <a
@@ -79,22 +76,7 @@
         <div class="navbar-collapse collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                routerLink=""
-                routerLinkActive="active"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >Disabled</a
-              >
+              <a href="" class="nav-link active" aria-current="page">Home</a>
             </li>
           </ul>
         </div>
@@ -104,6 +86,4 @@
       <router-outlet></router-outlet>
     </div>
   </div>
-  <!-- /#page-content-wrapper -->
 </div>
-<!-- /#wrapper -->

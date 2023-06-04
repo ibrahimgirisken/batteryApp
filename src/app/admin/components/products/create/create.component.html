@@ -1,0 +1,31 @@
+<div class="container">
+    <h3>Ürün Ekleme</h3>
+<form class="needs-validation" novalidate="">
+    <div class="row g-3">
+      <div class="col-md-12">
+        <label for="country" class="form-label">Kategoriler</label>
+        <select class="form-select" id="country" required="">
+          <option value="">Seçiniz</option>
+          <option>Bataryalar</option>
+        </select>
+      </div>
+
+      <div class="col-12">
+        <label for="name" class="form-label">Ürün Adı</label>
+        <input type="text" name="name" class="form-control" #txtName placeholder="Ürün Adı">
+      </div>
+
+      <div class="col-12">
+        <label for="address" class="form-label">Ürün Url</label>
+        <input type="text" class="form-control"#txtUrl placeholder="Ürün Url" required="">
+      </div>
+
+      <div class="col-12">
+        <label for="description" class="form-label">Ürün Açıklama</label>
+        <input type="text" name="description" id="description" class="form-control" #txtDescription placeholder="Ürün Açıklama">
+      </div>
+    </div>
+    <hr class="my-4">
+    <button class="btn btn-success btn-md justify-content-center pull-left" (click)="create(txtName,txtDescription)">Ekle</button>
+  </form>
+</div>
