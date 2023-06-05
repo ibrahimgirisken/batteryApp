@@ -1,73 +1,102 @@
 <!-- İletişim Formu ve Harita Grid'i -->
 <div class="container mt-5">
-    <div class="row">
-      <!-- İletişim Formu -->
-      <div class="col-lg-6">
-        <h2 class="mb-4">İletişim Formu</h2>
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Adınız</label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              placeholder="Adınızı girin"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">E-posta Adresiniz</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              placeholder="E-posta adresinizi girin"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Mesajınız</label>
-            <textarea
-              class="form-control"
-              id="message"
-              rows="5"
-              placeholder="Mesajınızı girin"
-              required
-            ></textarea>
-          </div>
-  
-          <div class="mb-3">
-              <div class="form-check form-switch">
-                 <input name="kvkkonay" id="kvkkonay" class="form-check-input" type="checkbox">
-                 <label class="form-check-label" for="kvkkonay">Ticari İletişim ve Ticari Elektronik İletiler Hakkında Yönetmelik kapsamında tarafıma elektronik ileti gönderilmesine onay veriyorum.</label>
-              </div>
-              <div class="kvkkiletbox"><a href="https://www.cw-enerji.com/tr/kurumsal/kvkk-aydinlatma-metni" target="_blank">KVKK Aydınlatma Metni'ni inceleyebilirsiniz.</a></div>
-              <div class="form-check form-switch">
-                 <input name="veriislemeonay" id="veriislemeonay" class="form-check-input" type="checkbox" required="">
-                 <label class="form-check-label" for="veriislemeonay">Test ile paylaşmış olduğum verilerimin işlenmesine Açık Rıza Beyanı ile onay veriyorum.</label>
-              </div>
-              <div class="kvkkiletbox"><a href="https://www.cw-enerji.com/tr/kurumsal/kvkk-aydinlatma-metni" target="_blank">KVKK Aydınlatma Metni'ni inceleyebilirsiniz.</a></div>
-           </div>
-  
-          <button type="submit" class="btn btn-primary">Gönder</button>
-        </form>
-      </div>
-  
-      <!-- Google Haritası -->
-      <div class="col-lg-6 mt-4 mt-lg-0">
-        <h2 class="mb-4">Adres Bilgisi</h2>
-        <div id="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d5517.478393493763!2d30.62533510873221!3d36.97837076880419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scw%20enerji!5e0!3m2!1str!2str!4v1684507362707!5m2!1str!2str"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+  <div class="row">
+    <!-- İletişim Formu -->
+    <div class="col-lg-6">
+      <h2 class="mb-4">İletişim Formu</h2>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Adınız</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Adınızı girin"
+            required
+          />
         </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-posta Adresiniz</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="E-posta adresinizi girin"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Mesajınız</label>
+          <textarea
+            class="form-control"
+            id="message"
+            rows="5"
+            placeholder="Mesajınızı girin"
+            required
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <div class="form-check form-switch">
+            <input
+              name="kvkkonay"
+              id="kvkkonay"
+              class="form-check-input"
+              type="checkbox"
+            />
+            <label class="form-check-label" for="kvkkonay"
+              >Ticari İletişim ve Ticari Elektronik İletiler Hakkında Yönetmelik
+              kapsamında tarafıma elektronik ileti gönderilmesine onay
+              veriyorum.</label
+            >
+          </div>
+          <div class="kvkkiletbox">
+            <a
+              href="https://www.cw-enerji.com/tr/kurumsal/kvkk-aydinlatma-metni"
+              target="_blank"
+              >KVKK Aydınlatma Metni'ni inceleyebilirsiniz.</a
+            >
+          </div>
+          <div class="form-check form-switch">
+            <input
+              name="veriislemeonay"
+              id="veriislemeonay"
+              class="form-check-input"
+              type="checkbox"
+              required=""
+            />
+            <label class="form-check-label" for="veriislemeonay"
+              >Test ile paylaşmış olduğum verilerimin işlenmesine Açık Rıza
+              Beyanı ile onay veriyorum.</label
+            >
+          </div>
+          <div class="kvkkiletbox">
+            <a
+              href="https://www.cw-enerji.com/tr/kurumsal/kvkk-aydinlatma-metni"
+              target="_blank"
+              >KVKK Aydınlatma Metni'ni inceleyebilirsiniz.</a
+            >
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Gönder</button>
+      </form>
+    </div>
+
+    <!-- Google Haritası -->
+    <div class="col-lg-6 mt-4 mt-lg-0">
+      <h2 class="mb-4">Adres Bilgisi</h2>
+      <div id="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10706.060007183662!2d30.607926226274508!3d37.08295777356163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c389fb8e96d627%3A0x6d78aec2e3173b70!2zQ1cgRU5FUkrEsCBNw5xILiBUxLBDLiBWRSBTQU4uIEEuxZ4u!5e0!3m2!1str!2str!4v1685943392083!5m2!1str!2str"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </div>
   </div>
-  
+</div>
