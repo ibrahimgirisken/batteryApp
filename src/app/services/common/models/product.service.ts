@@ -22,4 +22,12 @@ export class ProductService {
       });
   }
 
+  async list(): Promise<List_Product[]> {
+    const promiseData: Promise<List_Product[]> = this.httpClientService
+      .get<List_Product[]>({
+        controller: 'products',
+      })
+      .toPromise();
+    return await promiseData;
+  }
 }
