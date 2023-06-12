@@ -1,3 +1,4 @@
+import { DeleteDirective } from './../../../directives/admin/delete.directive';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductsComponent } from './products.component';
@@ -9,7 +10,8 @@ import { CreateComponent } from './create/create.component';
 @NgModule({
   declarations: [
     ProductsComponent,
-    CreateComponent
+    CreateComponent,
+    DeleteDirective
   ],
   imports: [
     CommonModule,
