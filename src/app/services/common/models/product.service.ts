@@ -20,6 +20,7 @@ export class ProductService {
       .subscribe((result) => {
         alert('Başarılı');
       });
+      debugger
   }
 
   async list(): Promise<List_Product[]> {
