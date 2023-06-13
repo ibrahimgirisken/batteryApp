@@ -24,7 +24,7 @@
           <td>{{ product.id }}</td>
           <td>{{ product.name }}</td>
           <td>{{ product.description }}</td>
-          <td [id]="product.id" appDelete></td>
+          <td [id]="product.id" appDelete (callback)="getProducts()"></td>
         </tr>
       </tbody>
     </table>

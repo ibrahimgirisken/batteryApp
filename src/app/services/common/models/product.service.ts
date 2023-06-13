@@ -19,7 +19,7 @@ export class ProductService {
         product
       )
       .subscribe((result) => {
-        alert('Başarılı');
+        // alert('Başarılı');
       });
       debugger
   }
