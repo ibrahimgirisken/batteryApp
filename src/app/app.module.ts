@@ -40,7 +40,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     })
   ],
   providers: [
-    {provide:"baseUrl",useValue:"https://localhost:7269/api",multi:true}
+    {provide:"baseUrl",useValue:"https://localhost:7269/api",multi:true},
   ],
   bootstrap: [AppComponent]
 })

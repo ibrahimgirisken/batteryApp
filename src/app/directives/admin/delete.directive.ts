@@ -26,7 +26,7 @@ export class DeleteDirective {
 
   @Input() id: string;
 
-  @HostListener('click')
+  @HostListener("click")
   async onClick() {
     const td: HTMLTableCellElement = this.element.nativeElement;
     await this.productService.delete(this.id);
