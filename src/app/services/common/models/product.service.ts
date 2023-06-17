@@ -21,15 +21,14 @@ export class ProductService {
       .subscribe((result) => {
         // alert('Başarılı');
       });
-      debugger
   }
 
-  async list(): Promise<List_Product[]> {
-    const promiseData: Promise<List_Product[]> = this.httpClientService
-      .get<List_Product[]>({
-        controller: 'products',
-      })
-      .toPromise();
+  async list(): Promise<{products:List_Product[]}> {
+    const promiseData: Promise<{products:List_Product[]}> = this.httpClientService
+      .get<{products:List_Product[]}>({
+        controller: "products"
+      }).toPromise();
+  
     return await promiseData;
   }
 

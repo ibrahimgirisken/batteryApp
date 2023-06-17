@@ -1,6 +1,8 @@
 import { List_Product } from './../../../contracts/product/list_product';
 import { ProductService } from './../../../services/common/models/product.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { DataTableDirective } from 'angular-datatables';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-products',
@@ -8,17 +10,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit {
+  productList:  List_Product[];
+  @ViewChild(DataTableDirective)
+  dtElement: DataTableDirective;
+  dtOptions: DataTables.Settings = {};
+  dtTrigger: Subject<any> = new Subject();
   constructor(private productService: ProductService) {}
-  dataSource: List_Product[] = [];
-  async ngOnInit() {
+
+ ngOnInit(){
     $(document).ready(function () {
-      $('#table').DataTable();
+      $('.table').DataTable();
     });
+    this.productList = [];
     this.getProducts();
   }
 
   async getProducts() {
-    const allProducts: List_Product[] = await this.productService.list();
-    this.dataSource = allProducts;
+    const allProducts: {products:List_Product[]}= await this.productService.list();
+    
+    this.productList =allProducts.products;
   }
 }

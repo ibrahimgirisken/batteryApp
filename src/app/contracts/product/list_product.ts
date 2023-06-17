@@ -1,5 +1,5 @@
 export class List_Product {
-    id:string;
-    name:string;
-    description:string;
-}
+    id: string;
+    name: string;
+    description: string;
+  }

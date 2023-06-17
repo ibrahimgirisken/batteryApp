@@ -35,6 +35,7 @@
     "datatables.net-dt": "^1.13.4",
     "font-awesome": "^4.7.0",
     "jquery": "^3.7.0",
+    "ngx-file-drop": "^15.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

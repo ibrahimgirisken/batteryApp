@@ -1,3 +1,4 @@
+import { FileUploadModule } from './../../../services/common/file-upload/file-upload.module';
 import { DeleteDirective } from './../../../directives/admin/delete.directive';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -18,7 +19,8 @@ import { CreateComponent } from './create/create.component';
     RouterModule.forChild([
       {path:"",component:ProductsComponent},
       {path:"create",component:CreateComponent}
-    ])
+    ]),
+    FileUploadModule
   ]
 })
 export class ProductsModule { }

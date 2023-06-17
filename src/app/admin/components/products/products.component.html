@@ -10,7 +10,7 @@
       >
     </div>
     <h2>Ürünler</h2>
-    <table class="table" id="table">
+      <table *ngIf="productList.length"  id="table" class="table table-hover table-striped table-bordered mb-5">
       <thead>
         <tr>
           <th scope="col">Id</th>
@@ -20,11 +20,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let product of dataSource">
-          <td>{{ product.id }}</td>
-          <td>{{ product.name }}</td>
-          <td>{{ product.description }}</td>
-          <td [id]="product.id" appDelete (callback)="getProducts()"></td>
+        <tr *ngFor="let item of productList">
+          <td>{{ item.id}}</td>
+          <td>{{ item.name}}</td>
+          <td>{{ item.description}}</td>
+
+          <td 
+          [id]="item.id"
+          controller="products" 
+          appDelete (callback)="getProducts()"></td>
         </tr>
       </tbody>
     </table>
