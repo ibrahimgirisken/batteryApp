@@ -5,6 +5,8 @@ import { FaqModule } from './faq/faq.module';
 import { HomeModule } from './home/home.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RegisterModule } from './register/register.module';
+import { LoginModule } from './login/login.module';
 
 
 
@@ -16,7 +18,9 @@ import { CommonModule } from '@angular/common';
     FaqModule,
     ProductsModule,
     ContactModule,
-    AboutModule
+    AboutModule,
+    RegisterModule,
+    LoginModule
   ]
 })
 export class ComponentsModule { }
