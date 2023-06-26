@@ -13,7 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     RouterModule.forChild([
-      {path:"",component:RegisterModule}
+      {path:"",component:RegisterComponent}
     ]),
     FormsModule,
     ReactiveFormsModule

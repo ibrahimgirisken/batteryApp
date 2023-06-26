@@ -1,4 +1,4 @@
-export class CreateUser {
+export class Create_User {
     userName:string;
     email:string;
     password:string

@@ -1,3 +1,4 @@
+import { UserService } from './../../../services/common/models/user.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  constructor(private userService:UserService){}  
+
+ async login(userNameOrEmail:string,password:string)
+  {
+    await this.userService.login(userNameOrEmail,password);
+  }
 }
