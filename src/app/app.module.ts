@@ -10,6 +10,7 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { JwtModule } from '@auth0/angular-jwt';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient,'./assets/i18n/', '.json');
@@ -26,6 +27,12 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    JwtModule.forRoot({
+      config:{
+        tokenGetter:() =>localStorage.getItem("accessToken"),
+        allowedDomains:["localhost:7269"]
+      }
+    }),
     AdminModule,
     UiModule,
     ReactiveFormsModule,

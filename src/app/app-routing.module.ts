@@ -1,12 +1,10 @@
-import { RegisterModule } from './ui/components/register/register.module';
 import { LayoutuiComponent } from './ui/layoutui/layoutui.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './admin/layout/layout.component';
 import { DashboardComponent } from './admin/components/dashboard/dashboard.component';
 import { HomeComponent } from './ui/components/home/home.component';
-import { LoginComponent } from './ui/components/login/login.component';
-import { RegisterComponent } from './ui/components/register/register.component';
+import { AuthGuard } from './guards/common/auth.guard';
 
 const routes: Routes = [
   {
@@ -19,51 +17,51 @@ const routes: Routes = [
         loadChildren: () =>
           import('./admin/components/products/products.module').then(
             (module) => module.ProductsModule
-          ),
+          ),canActivate:[AuthGuard]
       },
       {
         path: 'users',
         loadChildren: () =>
           import('./admin/components/users/users.module').then(
             (module) => module.UsersModule
-          ),
+          ),canActivate:[AuthGuard]
       },
       {
         path: 'corporate',
         loadChildren: () =>
           import('./admin/components/corporate/corporate.module').then(
             (module) => module.CorporateModule
-          ),
+          ),canActivate:[AuthGuard]
       },
       {
         path: 'settings',
         loadChildren: () =>
           import('./admin/components/settings/settings.module').then(
             (module) => module.SettingsModule
-          ),
+          ),canActivate:[AuthGuard]
       },
       {
         path: 'slider',
         loadChildren: () =>
           import('./admin/components/slider/slider.module').then(
             (module) => module.SliderModule
-          ),
+          ),canActivate:[AuthGuard]
       },
       {
         path: 'sss',
         loadChildren: () =>
           import('./admin/components/sss/sss.module').then(
             (module) => module.SssModule
-          ),
+          ),canActivate:[AuthGuard]
       },
       {
         path: 'lang',
         loadChildren: () =>
           import('./admin/components/langs/langs.module').then(
             (module) => module.LangsModule
-          ),
+          ),canActivate:[AuthGuard]
       },
-    ],
+    ],canActivate:[AuthGuard]
   },
   {
     path: '',
@@ -112,7 +110,7 @@ const routes: Routes = [
             (module) => module.LoginModule
           ),
       },
-    ],
+    ]
   },
 ];
 
