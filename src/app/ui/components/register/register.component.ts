@@ -1,5 +1,10 @@
+import { MessageType, Position } from './../../../services/common/alertify/alertify.service';
+import { UserService } from './../../../services/common/models/user.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Create_User } from 'src/app/contracts/user/create-user';
+import { User } from 'src/app/entities/user';
+import { AlertifyOptions, AlertifyService } from 'src/app/services/common/alertify/alertify.service';
 
 @Component({
   selector: 'app-register',
@@ -7,7 +12,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder,private userService:UserService,private alertifyService:AlertifyService) {}
   
   frm:FormGroup;
   ngOnInit(): void {
@@ -25,9 +30,26 @@ export class RegisterComponent implements OnInit {
   }
   submitted:boolean=false;
 
-  onSubmit(data: any) {
+  async onSubmit(user: User) {
     this.submitted=true;
     if(this.frm.invalid)
     return;
+    console.log(user);
+    
+    const result:Create_User=await this.userService.create(user);
+    console.log(result);
+    
+    if(result.succeeded)
+    {
+      this.alertifyService.message(result.message +" Kayıt işlemi yapıldı!",{
+        messageType:MessageType.Success,
+        position:Position.BottomRight});
+    }else{
+      this.alertifyService.message(result.message+" Kayıt işlemi sırasında hata ile karşılasıldı!",
+      {
+        messageType:MessageType.Error,
+        position:Position.BottomRight
+      })
+    }
   }
 }

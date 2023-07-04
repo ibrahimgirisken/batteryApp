@@ -1,6 +1,6 @@
 <div class="container justify-content-center align-content-center mt-5">
   <div class="row">
-    <form (ngSubmit)="onSubmit(frm.value)" [formGroup]="frm">
+    <form [formGroup]="frm" (ngSubmit)="onSubmit(frm.value)">
       <div class="text-center">
         <img
           class="mb-4"

@@ -12,7 +12,7 @@ import { TokenResponse } from 'src/app/contracts/token/tokenResponse';
 export class UserService {
   constructor(public httpClientService: HttpClientService) {}
 
-  async create(user: User) {
+  async create(user: User):Promise<Create_User> {
     const observable: Observable<Create_User | User> =
       this.httpClientService.post<Create_User | User>(
         {
@@ -20,7 +20,7 @@ export class UserService {
         },
         user
       );
-    return (await firstValueFrom(observable)) as Create_User;
+    return await firstValueFrom(observable) as Create_User;
   }
 
   async login(userNameOrEmail: string, password: string): Promise<void> {
